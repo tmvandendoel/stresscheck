@@ -1,0 +1,13 @@
+AFSPRAKEN / REFERENTIES
+In dit document kunnen we zaken als mappenstructuur, database, vormgeving etc afstemmen. Graag aanpassen als er iets niet klopt!
+
+MAPPENSTRUCTUUR
+/pages 		: bevat alle pagina's
+/sources 	: bevat header, footer en css*
+/data 		: bevat php scripts om de database te benaderen
+
+DATABASE
+tabel: VRAGEN (int TEST, int NUMMER, varchar VRAAG)*
+tabel: ANTWOORDEN (int TEST, varchar ANTWOORDSTRING)*
+
+*niet definitief / onbekend
