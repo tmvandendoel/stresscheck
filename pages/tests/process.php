@@ -22,7 +22,25 @@
                 echo $data."<br>";
                 
                 require("../../data/connect.php");
+                $conn = db_connect("test");
+                if(!$conn)
+                {
+                    echo "Er is een fout opgetreden. <i>".$GLOBALS["db_error"]."</i>";
                 }
+                else
+                {
+                    $query = 'INSERT INTO table1 (date) VALUES ("'.$data.'")';
+                    $result = $conn->query($query);
+                    if ($result === true)
+                    {
+                        echo "De gegevens zijn succesvol opgeslagen.<br><a href='viewdata.php'>Gegevens inzien</a>\n";
+                    }
+                    else
+                    {
+                        echo "Er is een fout opgetreden. <i>".$conn->error."</i>";                        
+                        }
+                }
+            }
         }
         else
         {
