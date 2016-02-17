@@ -9,12 +9,12 @@
     <?php include("../../sources/header.php"); ?>
     
     <div class="body">
-    <h1>Testpagina</h1>
-        De volgende items zijn beschikbaar:
+    <h1>Testen</h1>
+        Er zijn verschillende testen beschikbaar. Kies hieronder de test die voor u van toepassing is.
         <ul>
             <li><a href="testtest.php">Database test</a> <i>(testpagina)</i></li>
             <li><a href="viewdata.php">Database bekijken</a> <i>(testpagina)</i></li>
-            <li><a href="viewquestions.php">Vragen weergeven</a> <i>(wachtwoord vereist)</i></li>
+            <li><a href="testa.php">Test A</a></li>
         </ul>
     </div>
 

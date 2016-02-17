@@ -18,7 +18,7 @@
             <hr>Deze tabel bevat de volgende gegevens:
         <?php
             require("../../data/connect.php");
-            $conn = db_connect("test");
+            $conn = db_connect();
             if(!$conn)
             {
                 echo "Er is een fout opgetreden. <i>".$GLOBALS["db_error"]."</i>";
