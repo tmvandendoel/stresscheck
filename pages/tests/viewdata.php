@@ -26,21 +26,13 @@
             else
             {
                 $query = 'SELECT * FROM table1';
-                $result = $conn->query($query);
-                if ($result->num_rows > 0)
+                $result = getarray($conn->query($query));
+                echo "<table>\n";
+                foreach($result as $item)
                 {
-                    echo "<table>\n";
-                    // output data of each row
-                    while($row = $result->fetch_assoc())
-                    {
-                        echo "<tr><td>".$row["nr"]."</td><td>".$row["date"]."</td></tr>\n";
-                    }
-                    echo "</table>\n";
+                    echo "<tr><td>".$item["nr"]."</td><td>".$item["date"]."</td></tr>\n";
                 }
-                else
-                {
-                    echo "0 results";
-                }
+                echo "<table>";
             }
         }
         else
@@ -48,7 +40,7 @@
         ?>
         <form action="viewdata.php" method="get">
             <input type="hidden" name="sender" value="viewdata.php" autofocus/>
-            Wachtwoord: string: <input type="text" name="pw"/>
+            Wachtwoord: <input type="text" name="pw"/>
         </form>
         <?php
         }

@@ -14,6 +14,7 @@
         <ul>
             <li><a href="testtest.php">Database test</a> <i>(testpagina)</i></li>
             <li><a href="viewdata.php">Database bekijken</a> <i>(testpagina)</i></li>
+            <li><a href="viewquestions.php">Vragen weergeven</a> <i>(wachtwoord vereist)</i></li>
         </ul>
     </div>
 

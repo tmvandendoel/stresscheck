@@ -1,9 +1,11 @@
 <?php
-function db_connect($db)
+function db_connect()
 {
     $server = "localhost";
     $username = "root";
     $password = "henk";
+    $db = "test";
+    //deze db veranderen in daadwerkelijke 
     
     $conn = new mySQLi($server,$username,$password,$db);
     
@@ -15,5 +17,16 @@ function db_connect($db)
     {
         return $conn;
     }
+}
+function getarray($sqloutput)
+{
+    $return;
+    $i=0;
+    while($row = $sqloutput->fetch_assoc())
+    {
+        $return[$i] = $row;
+        $i++;
+    }
+    return $return;
 }
 ?>
