@@ -30,6 +30,7 @@
     <div class="body">
     <h1>Test A</h1>
         Iedere vraag is een bewering. Kies geef aan in hoeverre deze bewering geldt voor u.
+        <form action="process.php" method="get">
         <?php
         $nr = 1;
         echo "<table>\n";
@@ -42,7 +43,7 @@
             echo "<td>helemaal niet van toepassing";
             for ($i = 0; $i < 6; $i++)
             {
-                echo '<input type="radio" name="vraagid'.$question["id"].'"/>';
+                echo '<input type="radio" name="'.$question["id"].'" value="'.$i.'"/>';
             }
             echo "volledig van toepassing</td>";
             echo "</tr>\n";
@@ -50,9 +51,10 @@
         }
         echo "</table>";
         ?>
-        <form>
-            <input type="button" value="Vorige" id="previous" onclick="fprevious();">
-            <input type="button" value="Volgende" id="next" onclick="fnext();">
+            <input type="button" value="Vorige" id="previous" onclick="fprevious();"/>
+            <input type="button" value="Volgende" id="next" onclick="fnext();"/>
+            <input type="hidden" name="sender" value="testa">
+            <input type="submit" value="VERSTUUR"/>
         </form>
     </div>
 

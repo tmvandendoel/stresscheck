@@ -33,7 +33,7 @@
                     $result = $conn->query($query);
                     if ($result === true)
                     {
-                        echo "De gegevens zijn succesvol opgeslagen.<br><a href='viewdata.php'>Gegevens inzien</a>\n";
+                        echo "De gegevens zijn succesvol opgeslagen.<br>";
                     }
                     else
                     {
@@ -41,11 +41,33 @@
                         }
                 }
             }
+            else if ($sender == "testa")
+            {
+                echo "U heeft test A afgelegd.<br><br>";
+                //Hier moet de code die de resultaten in de juiste database zet. Daarnaast
+                //ook het script dat de meter verzorgt. In plaats daarvan worden nu gewoon
+                //de resultaten weergegeven.
+                $ansarr[0] = "helemaal niet van toepassing";
+                $ansarr[1] = "niet van toepassing";
+                $ansarr[2] = "matig van toepassing";
+                $ansarr[3] = "een beetje van toepassing";
+                $ansarr[4] = "van toepassing";
+                $ansarr[5] = "zeer van toepassing";
+                for ($i = 0; $i < count($post); $i++)
+                {
+                    echo "Vraag $i: ".$ansarr[$post[$i]]."<br>\n";
+                    }
+            }
+            else
+            {
+                echo "Er is een fout opgetreden.<br><i>Fout: onbekende afzender.</i>";
+                }
         }
         else
         {
-            die("Er is een fout opgetreden.<br><i>Fout: geen zender opgegeven.</i>");
-            }
+            echo "Er is een fout opgetreden.<br><i>Fout: geen zender opgegeven.</i>";
+        }
+        echo "<a href='viewdata.php'>Gegevens inzien</a>\n";
         ?>
         
     </div>
