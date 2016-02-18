@@ -9,26 +9,18 @@
             background-color: #AABBCC;
         }
         </style>
+        <?php
+            require("../../data/connect.php");
+            $conn = db_connect();
+            $sql = "SELECT * FROM questions WHERE test = 1";
+            $results = getarray($conn->query($sql));
+        ?>
+        <script type="text/javascript" src="../../sources/qarrangement.js"></script>
         <script type="text/javascript">
         <!--
-        alert("boe");
+        //alert("boe");
         var activeq = 1;
-        var numberq = 4; // let php fill in
-        function setcss()
-        {
-            alert("graag");
-            for (i = 1; i <= numberq; i++)
-            {
-                /*var tr = document.getElementById("id" + i);
-                if (i + 1 == activeq || i - 1 == activeq)
-                {
-                    tr.style.opacity = 0.5;
-                }
-                else
-                {
-                    tr.style.display = "none";
-                }*/
-            }
+        var numberq = <?php echo count($results); ?>;
         //-->
         </script>
     </head>
@@ -39,15 +31,12 @@
     <h1>Test A</h1>
         Iedere vraag is een bewering. Kies geef aan in hoeverre deze bewering geldt voor u.
         <?php
-        require("../../data/connect.php");
-        $conn = db_connect();
-        $sql = "SELECT * FROM questions WHERE test = 1";
-        $results = getarray($conn->query($sql));
         $nr = 1;
         echo "<table>\n";
         foreach($results as $question)
         {
-            echo "<tr id=id$nr>";
+            echo '<tr id="id'.$nr.'" onclick="ffocus('.$nr.');">';
+            //echo '<tr id="id'.$nr.'">';
             echo "<td>$nr</td>";
             echo "<td>".$question["question"]."</td>";
             echo "<td>helemaal niet van toepassing";
@@ -61,6 +50,10 @@
         }
         echo "</table>";
         ?>
+        <form>
+            <input type="button" value="Vorige" id="previous" onclick="fprevious();">
+            <input type="button" value="Volgende" id="next" onclick="fnext();">
+        </form>
     </div>
 
     <?php include("../../sources/footer.php"); ?>
