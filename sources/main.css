@@ -1,3 +1,10 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 60%;
+	background-color: #888;
+}
+
 a
 {
 	text-decoration: none;
@@ -12,11 +19,9 @@ p
 {
 
 	float:right;
-    width:auto;
-    float:top;
-    padding:10px; 
-	background-color: #888;
-	height:400px;
+    width:80%;
+    background-color: #888;
+	height:100%;
 	
 }
 
@@ -56,8 +61,8 @@ li a:hover {
 #nav {
     line-height:30px;
     background-color:#eeeeee;
-    height:400px;
-    width:100px;
+    height:450px;
+    width:19%;
     float:left;
     padding:5px; 
 
