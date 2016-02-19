@@ -1,11 +1,53 @@
-body
+a
 {
-    background-color: #CCCCFF;
+	text-decoration: none;
 }
-div.body
+p
 {
-    width: 800px;
-    background-color: #EEEEFF;
-    margin: auto;
-    padding: 10px;
+	color: #3333FF;
+	text-align: left;
+	font-size: 1em;
+}
+#body
+{
+	float:right;
+    width:auto;
+    float:top;
+    padding:10px; 
+	background-color: #888;
+	height:400px;
+	
+}
+
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:400px;
+    width:100px;
+    float:left;
+    padding:5px; 
+
 }

@@ -7,12 +7,21 @@
     </head>
     <body>
     <?php include("sources/header.php"); ?>
-    
-    <div class="body">
-        <h1>Titel</h1>
-        En hier dan de pagina-inhoud.
+    <div id="nav">
+	<p>submenu<br>hallo<br>
+	</div>
+    <div id="body">
+     
+       <p> En hier dan de pagin
+	   -inhouEn hier dan de pagina-inhoud
+	   En hier dan de pagina-inhoudEn hier dan 
+	   de pagina-inhoudEn hier dan de pagina-inhoud
+	   En hier dan de pagina-inhoudEn hier dan de 
+	   pagina-inhoud
+	   d.
+	   </p>
     </div>
-
+	
     <?php include("sources/footer.php"); ?>
     </body>
 </html>
