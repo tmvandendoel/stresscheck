@@ -4,13 +4,11 @@ img {
     height: 120px;
 
 	margin:0;
-	right:0;
-	left:0;
-	top:0;
-	padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 00px;
+	padding:0;
+}
+menu{
+	margin:0;
+	padding:0;
 }
 
 </style>
