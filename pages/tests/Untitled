@@ -1,0 +1,5 @@
+$server = "localhost";
+$username = "root";
+$password = "henk";
+
+$connection = new mySQLi($server,$username,$password);

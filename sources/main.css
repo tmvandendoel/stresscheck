@@ -10,6 +10,7 @@ p
 }
 #body
 {
+<<<<<<< HEAD
 	float:right;
     width:auto;
     float:top;
@@ -20,6 +21,16 @@ p
 }
 
 ul.menu {
+=======
+	float:bottom;
+    width:350px;
+    float:left;
+    padding:10px; 
+	background-color: #888;
+	
+}
+ul {
+>>>>>>> origin/master
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -45,9 +56,17 @@ li a:hover {
 #nav {
     line-height:30px;
     background-color:#eeeeee;
+<<<<<<< HEAD
     height:400px;
+=======
+    height:max;
+>>>>>>> origin/master
     width:100px;
     float:left;
     padding:5px; 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master
