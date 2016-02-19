@@ -43,7 +43,7 @@
             echo "<td>helemaal niet van toepassing";
             for ($i = 0; $i < 6; $i++)
             {
-                echo '<input type="radio" name="'.$question["id"].'" value="'.$i.'"/>';
+                echo '<input type="radio" name="qid'.$question["id"].'" value="'.$i.'"/>';
             }
             echo "volledig van toepassing</td>";
             echo "</tr>\n";

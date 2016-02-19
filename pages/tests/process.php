@@ -53,9 +53,14 @@
                 $ansarr[3] = "een beetje van toepassing";
                 $ansarr[4] = "van toepassing";
                 $ansarr[5] = "zeer van toepassing";
-                for ($i = 0; $i < count($post); $i++)
+                $i = 1;
+                foreach ($post as $key => $value)
                 {
-                    echo "Vraag $i: ".$ansarr[$post[$i]]."<br>\n";
+                    if(substr($key,0,3) == "qid")
+                    {
+                        echo "Vraag $i: ".$ansarr[$value]."<br>\n";
+                        $i++;
+                    }
                     }
             }
             else
