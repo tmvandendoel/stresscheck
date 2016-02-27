@@ -15,6 +15,7 @@
             <li><a href="testtest.php">Database test</a> <i>(testpagina)</i></li>
             <li><a href="viewdata.php">Database bekijken</a> <i>(testpagina)</i></li>
             <li><a href="testa.php">Test A</a></li>
+            <li><a href="addq.php">Vragen toevoegen</a> <i>(developing)</i></li>
         </ul>
     </div>
 
