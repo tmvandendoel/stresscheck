@@ -2,11 +2,11 @@
 <html>
     <head>
         <title>Home - Data weergeven</title>
-        <link rel="stylesheet" type="text/css" href="../../sources/main.css"/>
+        <link rel="stylesheet" type="text/css" href="/sources/main.css"/>
         
     </head>
     <body>
-    <?php include("../../sources/header.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/sources/header.php"); ?>
     
     <div class="body">
         <?php
@@ -21,7 +21,7 @@
                 $data = $post["data"];
                 echo $data."<br>";
                 
-                require("../../data/connect.php");
+                require($_SERVER['DOCUMENT_ROOT']."/data/connect.php");
                 $conn = db_connect("test");
                 if(!$conn)
                 {
@@ -77,6 +77,6 @@
         
     </div>
 
-    <?php include("../../sources/footer.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/sources/footer.php"); ?>
     </body>
 </html>

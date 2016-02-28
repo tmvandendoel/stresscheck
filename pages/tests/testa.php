@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Home - Testen</title>
-        <link rel="stylesheet" type="text/css" href="../../sources/main.css"/>
+        <link rel="stylesheet" type="text/css" href="/sources/main.css"/>
         <style type="text/css">
         tr
         {
@@ -10,12 +10,12 @@
         }
         </style>
         <?php
-            require("../../data/connect.php");
+            require($_SERVER['DOCUMENT_ROOT']."/data/connect.php");
             $conn = db_connect();
             $sql = "SELECT * FROM questions WHERE test = 1";
             $results = getarray($conn->query($sql));
         ?>
-        <script type="text/javascript" src="../../sources/qarrangement.js"></script>
+        <script type="text/javascript" src="/sources/qarrangement.js"></script>
         <script type="text/javascript">
         <!--
         //alert("boe");
@@ -25,7 +25,7 @@
         </script>
     </head>
     <body onload="setcss();">
-    <?php include("../../sources/header.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/sources/header.php"); ?>
     
     <div class="body">
     <h1>Test A</h1>
@@ -58,6 +58,6 @@
         </form>
     </div>
 
-    <?php include("../../sources/footer.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/sources/footer.php"); ?>
     </body>
 </html>

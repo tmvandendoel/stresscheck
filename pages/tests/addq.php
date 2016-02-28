@@ -2,11 +2,11 @@
 <html>
     <head>
         <title>Home - Testen</title>
-        <link rel="stylesheet" type="text/css" href="../../sources/main.css"/>
+        <link rel="stylesheet" type="text/css" href="/sources/main.css"/>
         
     </head>
     <body>
-    <?php include("../../sources/header.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/sources/header.php"); ?>
     
     <div class="body">
     <?php
@@ -26,7 +26,7 @@
     }
     else
     {
-        require("../../data/connect.php");
+        require($_SERVER['DOCUMENT_ROOT']."/data/connect.php");
         $conn = db_connect();
         $regels = explode("\n",$_POST["input"]);
         $sql = "INSERT INTO ".$_POST["table"]." (question, reverse) VALUES ";
@@ -52,6 +52,6 @@
     ?>
     </div>
 
-    <?php include("../../sources/footer.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/sources/footer.php"); ?>
     </body>
 </html>

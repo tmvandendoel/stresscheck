@@ -12,7 +12,7 @@ menu{
 }
 
 </style>
-<img src="sources/palen.jpg"  >
+<img src="/sources/palen.jpg"  >
 <ul>
   <li><a class="active" class="menu" href="#home">Home</a></li>
   <li><a class="menu" href="#news">News</a></li>

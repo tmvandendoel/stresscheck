@@ -2,11 +2,11 @@
 <html>
     <head>
         <title>Home - Test A</title>
-        <link rel="stylesheet" type="text/css" href="../../sources/main.css"/>
+        <link rel="stylesheet" type="text/css" href="/sources/main.css"/>
         
     </head>
     <body>
-    <?php include("../../sources/header.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/sources/header.php"); ?>
     
     <div class="body">
         <h1>Test A</h1>
@@ -18,6 +18,6 @@
         </form>
     </div>
 
-    <?php include("../../sources/footer.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/sources/footer.php"); ?>
     </body>
 </html>
