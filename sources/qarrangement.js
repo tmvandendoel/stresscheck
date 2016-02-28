@@ -19,6 +19,11 @@ function setcss()
             tr.style.opacity = 0.2;
             tr.style.display = "table-row";
         }*/
+        else if ((activeq == 1 && i == 3) || (activeq == numberq && i + 2 == numberq))
+        {
+            tr.style.opacity = 0.2;
+            tr.style.display = "table-row";
+        }
         else
         {
             tr.style.display = "none";
