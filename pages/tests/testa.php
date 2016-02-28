@@ -12,7 +12,7 @@
         <?php
             require($_SERVER['DOCUMENT_ROOT']."/data/connect.php");
             $conn = db_connect();
-            $sql = "SELECT * FROM questions WHERE test = 1";
+            $sql = "SELECT * FROM testa";
             $results = getarray($conn->query($sql));
         ?>
         <script type="text/javascript" src="/sources/qarrangement.js"></script>
