@@ -39,7 +39,7 @@
             echo '<tr id="id'.$nr.'" onclick="ffocus('.$nr.');">';
             //echo '<tr id="id'.$nr.'">';
             echo "<td>$nr</td>";
-            echo "<td>".$question["question"]."</td>";
+            echo "<td style='width: 500px'>".$question["question"]."</td>";
             echo "<td>helemaal niet van toepassing";
             for ($i = 0; $i < 6; $i++)
             {
