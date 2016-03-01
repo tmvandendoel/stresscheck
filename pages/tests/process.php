@@ -42,12 +42,12 @@
                         }
                 }
             }
-            else if ($sender == "testa")
+            else if ($sender == "testa" || $sender == "testb")
             {
-                echo "U heeft test A afgelegd.<br><br>";
+                echo "U heeft test ".strtoupper(substr($sender,-1))." afgelegd.<br><br>";
                 require($_SERVER['DOCUMENT_ROOT']."/data/connect.php");
                 $conn = db_connect();
-                $sql = "SELECT * FROM testa";
+                $sql = "SELECT * FROM $sender";
                 $results = getarray($conn->query($sql));
                 
                 $score = 0;
@@ -84,7 +84,7 @@
             //require($_SERVER['DOCUMENT_ROOT']."/data/connect.php");
             //$conn = db_connect();
             
-            $sql = "INSERT INTO testa_results (score";
+            $sql = "INSERT INTO ".$sender."_results (score";
             for($i = 1; $i <= 25; $i++)
             {
                 $sql .= ", q$i";
@@ -95,7 +95,7 @@
             {
                 $sql .= ",".$post["qid$i"];
             }
-            $sql .= "0";// intended error "0 instead of )"
+            $sql .= ")";
             //echo "Query: $sql";
             if(!$conn->query($sql))
             {
