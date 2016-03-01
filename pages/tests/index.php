@@ -7,16 +7,12 @@
     </head>
     <body>
     <?php include($_SERVER['DOCUMENT_ROOT']."/sources/header.php"); ?>
-    
-    <div class="body">
-    <h1>Testen</h1>
-        Er zijn verschillende testen beschikbaar. Kies hieronder de test die voor u van toepassing is.
-        <ul>
-            <li><a href="testtest.php">Database test</a> <i>(testpagina)</i></li>
-            <li><a href="viewdata.php">Database bekijken</a> <i>(testpagina)</i></li>
-            <li><a href="testa.php">Test A</a></li>
-            <li><a href="addq.php">Vragen toevoegen</a> <i>(developing)</i></li>
-        </ul>
+    <div id="nav">
+        <?php include("nav.php"); ?>       
+    </div>
+    <div id="body">
+        <h1>Testen</h1>
+        Er zijn verschillende testen beschikbaar. Kies links de test die voor u van toepassing is.
     </div>
 
     <?php include($_SERVER['DOCUMENT_ROOT']."/sources/footer.php"); ?>

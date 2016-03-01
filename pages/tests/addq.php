@@ -7,7 +7,9 @@
     </head>
     <body>
     <?php include($_SERVER['DOCUMENT_ROOT']."/sources/header.php"); ?>
-    
+    <div id="nav">
+        <?php include("nav.php"); ?>       
+    </div>   
     <div class="body">
     <?php
     if (!isset($_POST["input"]))
