@@ -10,6 +10,7 @@
     </head>
     <body>
     <?php include($_SERVER['DOCUMENT_ROOT']."/sources/header.php"); ?>
+    <div id="nav"></div>
     <div id="body">
        <h1>Foutenlogboek</h1>
        Dit is een adminpagina.<br>
