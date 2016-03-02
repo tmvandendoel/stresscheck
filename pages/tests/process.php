@@ -122,7 +122,7 @@
         {
             echo "Er is een fout opgetreden.<br><i>Fout: geen zender opgegeven.</i>";
         }
-        echo "<a href='viewdata.php'>Gegevens inzien</a>\n";
+        echo "<a href='viewdata.php?table=".$sender."_results'>Gegevens inzien</a>\n";
         ?>
         
     </div>

@@ -15,7 +15,14 @@
         if ($_GET["pw"] == "12345")
         {
         ?>
-            <hr>Deze tabel bevat de volgende gegevens:
+            <form action="viewdata.php" method="get">
+                Tabel: <input type="text" name="table" value="<?php echo $_GET["table"]; ?>"/>
+                <input type="hidden" name="pw" value="12345"/>
+                <input type="submit" value="OK">            
+            </form>
+            <hr>
+            Deze tabel bevat de volgende gegevens:
+            
         <?php
             require($_SERVER['DOCUMENT_ROOT']."/data/connect.php");
             $conn = db_connect();
@@ -25,22 +32,30 @@
             }
             else
             {
-                $query = 'SELECT * FROM table1';
+                $table = $_GET["table"];
+                $query = 'SELECT * FROM '.$table;
                 $result = getarray($conn->query($query));
-                echo "<table>\n";
+                echo "<table border='1'>\n";
                 foreach($result as $item)
                 {
-                    echo "<tr><td>".$item["nr"]."</td><td>".$item["date"]."</td></tr>\n";
+                    //echo "<tr><td>".$item["nr"]."</td><td>".$item["date"]."</td></tr>\n";
+                    echo "<tr>";
+                    foreach($item as $value)
+                    {
+                        echo "<td>$value</td>";
+                    }
+                    echo "</tr>\n";
                 }
-                echo "<table>";
+                echo "</table>";
             }
         }
         else
         {
         ?>
         <form action="viewdata.php" method="get">
-            <input type="hidden" name="sender" value="viewdata.php" autofocus/>
+            <input type="hidden" name="table" value="<?php echo $_GET["table"]; ?>"/>
             Wachtwoord: <input type="text" name="pw"/>
+            <input type="submit" value="OK">
         </form>
         <?php
         }
