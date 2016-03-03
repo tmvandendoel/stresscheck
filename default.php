@@ -2,11 +2,11 @@
 <html>
     <head>
         <title>Home - Check je stress</title>
-        <link rel="stylesheet" type="text/css" href="/sources/main.css"/>
+        <link rel="stylesheet" type="text/css" href="sources/main.css"/>
         
     </head>
     <body>
-    <?php include($_SERVER['DOCUMENT_ROOT']."/sources/header.php"); ?>
+    <?php include("sources/header.php"); ?>
     <div id="nav">
 	<p>submenu<br>hallo<br><br><br><br><br><br>
 	</div>
@@ -22,6 +22,6 @@
 	   </p>
     </div>
 	
-    <?php include($_SERVER['DOCUMENT_ROOT']."/sources/footer.php"); ?>
+    <?php include("sources/footer.php"); ?>
     </body>
 </html>
