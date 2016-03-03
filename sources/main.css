@@ -1,69 +1,79 @@
 html, body {
 	padding: 0;
 	margin: 0;
-	height: 60%;
-	background-color: #888;
+	height: auto;
+	background-color: #ccccff;
 }
 
+}
 a
 {
 	text-decoration: none;
 }
 p
 {
-	color: #3333FF;
+	color: black;
 	text-align: left;
 	font-size: 1em;
+	margin: 0px;
 }
 #body
 {
 
-	float:right;
-    width:80%;
-    background-color: #888;
-	height:100%;
+	float:top;
+    width:79%;
+	margin-left: 20%;
+    background-color: #ccccff;
+	height:430px;
+	padding:5px;
+	
+
 	
 }
 
 ul.menu {
 
-	float:bottom;
+	
     width:350px;
     float:left;
-    padding:10px; 
-	background-color: #888;
+    padding:0px; 
+	margin: 0;
+	
 	
 }
 ul {
 
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     overflow: hidden;
-    background-color: #333;
+    background-color: #aaaaff;
 }
 
 li {
     float: left;
+	padding: 0;
+	margin: 0;
 }
 
 li a {
     display: inline-block;
-    color: blue;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: #eeeeff;
 }
 #nav {
     line-height:30px;
-    background-color:#eeeeee;
-    height:450px;
+    background-color:#eeeeff;
+    height:430px;
     width:19%;
     float:left;
     padding:5px; 
+	margin-bottom:0px;
 
 }
