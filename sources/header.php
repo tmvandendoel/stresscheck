@@ -1,7 +1,8 @@
 <style>
 img {
+	position: relative;
     width: 100%;
-    height: 120px;
+    height: 20%;
 
 	margin:0;
 	padding:0;
