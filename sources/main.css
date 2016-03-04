@@ -1,7 +1,9 @@
 html, body {
+	position:relative;
+	bottom: 0;
 	padding: 0;
 	margin: 0;
-	height: auto;
+	height: 100%;
 	background-color: #ccccff;
 }
 
@@ -19,14 +21,17 @@ p
 }
 #body
 {
-
-	float:top;
-    width:79%;
+	position:absolute;
+	float:right;
+    width:85%;
 	margin-left: 20%;
-    background-color: #ccccff;
-	height:430px;
-	padding:5px;
-	
+	background-color: #ccccff;
+	padding:5px; 
+	margin:0;
+	right:0;
+	bottom:50px;
+	top:20%;
+	margin-top:45px;
 
 	
 }
@@ -38,6 +43,7 @@ ul.menu {
     float:left;
     padding:0px; 
 	margin: 0;
+	height:45px;
 	
 	
 }
@@ -57,23 +63,32 @@ li {
 }
 
 li a {
+	
     display: inline-block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px ;
     text-decoration: none;
+	
 }
 
 li a:hover {
     background-color: #eeeeff;
 }
 #nav {
+	position: absolute;
     line-height:30px;
     background-color:#eeeeff;
-    height:430px;
-    width:19%;
+    width:15%;
     float:left;
     padding:5px; 
-	margin-bottom:0px;
+	margin:0;
+	left:0;
+	bottom:50px;
+	top:20%;
+	margin-top:45px;
+
+	
 
 }
+
